@@ -50,11 +50,17 @@
             <span class="dots" aria-hidden="true"></span>
           </div>
           <p class="risk" id="risk">Incoming · High risk</p>
-          <div class="avatar" id="avatar">AS</div>
+          <div class="avatar-wrap">
+            <span class="pulse"></span>
+            <span class="pulse delay"></span>
+            <div class="avatar" id="avatar">AS</div>
+          </div>
           <h2 id="caller">Account Security</h2>
           <p class="number" id="number">+1 202 555 0148 · spoofed</p>
           <p class="intent" id="intent">Wants your one-time passcode</p>
           <p class="note" id="note">A real bank does not call to ask for a passcode. Signet matched this pattern before the ring finished.</p>
+          <div class="meter" aria-hidden="true"><span></span></div>
+          <p class="match">Pattern match 86% · spoofed caller</p>
           <div class="actions">
             <button type="button" class="act decline" data-choice="decline">
               <span class="icon">×</span>
