@@ -24,4 +24,6 @@ A lookup can send the number you ask about. It does not send your contacts.
 
 ## Author
 
-[Sneh Dhanani](https://github.com/DhananiSneh) · [snehdhanani1@gmail.com](mailto:snehdhanani1@gmail.com)
+[Sneh Dhanani](https://github.com/DhananiSneh) builds web products, iOS apps, Android apps, custom software, and quantum algorithms.
+
+[snehdhanani1@gmail.com](mailto:snehdhanani1@gmail.com)
