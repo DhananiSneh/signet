@@ -10,6 +10,8 @@ This repository is the public introduction. The iPhone app is private and is not
 
 [dhananisneh.github.io/signet](https://dhananisneh.github.io/signet/)
 
+![Signet](preview.png)
+
 The page is a working preview. Decline, Shield, and Accept each explain what Signet does with that call. The number on screen is fictional.
 
 ## What a call shows
