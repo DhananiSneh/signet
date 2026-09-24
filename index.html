@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signet — Know the call before you answer</title>
+  <meta name="description" content="Signet is caller ID for iPhone. See who is calling, what they want, and whether it is a scam before you answer. Contacts stay on the device.">
+  <meta property="og:title" content="Signet — Know the call before you answer">
+  <meta property="og:description" content="Caller ID, intent, and scam blocking. Contacts never leave the device. No ads.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dhananisneh.github.io/signet/">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="#top">Signet</a>
+    <a class="ghost" href="https://github.com/DhananiSneh/signet">Source</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="copy">
+        <p class="eyebrow">Caller ID for iPhone</p>
+        <h1>Know the call before you answer.</h1>
+        <p class="lede">
+          Signet shows who is calling, what they want, and whether the call is a scam.
+          Your contacts stay on the phone. There are no ads, and the address book is never uploaded.
+        </p>
+        <ul class="facts">
+          <li>
+            <strong>Who</strong>
+            <span>A name, not an unknown number.</span>
+          </li>
+          <li>
+            <strong>Why</strong>
+            <span>The intent, before you say hello.</span>
+          </li>
+          <li>
+            <strong>Yours</strong>
+            <span>Lookups send a number. Never your book.</span>
+          </li>
+        </ul>
+        <p class="by">A product by <a href="https://github.com/DhananiSneh">Sneh Dhanani</a></p>
+      </div>
+
+      <div class="stage" aria-hidden="false">
+        <div class="phone">
+          <div class="status">
+            <span>9:41</span>
+            <span class="dots" aria-hidden="true"></span>
+          </div>
+          <p class="risk" id="risk">Incoming · High risk</p>
+          <div class="avatar" id="avatar">AS</div>
+          <h2 id="caller">Account Security</h2>
+          <p class="number" id="number">+1 202 555 0148 · spoofed</p>
+          <p class="intent" id="intent">Wants your one-time passcode</p>
+          <p class="note" id="note">A real bank does not call to ask for a passcode. Signet matched this pattern before the ring finished.</p>
+          <div class="actions">
+            <button type="button" class="act decline" data-choice="decline">
+              <span class="icon">×</span>
+              Decline
+            </button>
+            <button type="button" class="act shield" data-choice="shield">
+              <span class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 3 5 6v6c0 4.2 2.8 7.2 7 9 4.2-1.8 7-4.8 7-9V6l-7-3z"/>
+                </svg>
+              </span>
+              Shield
+            </button>
+            <button type="button" class="act accept" data-choice="accept">
+              <span class="icon">✓</span>
+              Accept
+            </button>
+          </div>
+          <p class="result" id="result" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Signet · contacts never leave the device</p>
+    <p><a href="mailto:snehdhanani1@gmail.com">snehdhanani1@gmail.com</a></p>
+  </footer>
+
+  <script>
+    const result = document.getElementById("result");
+    const lines = {
+      decline: "Declined. The number stays out of your contacts.",
+      shield: "Shielded. The next call from this number stays silent.",
+      accept: "You can answer. You already know what they want."
+    };
+    document.querySelectorAll(".act").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".act").forEach((item) => item.classList.remove("is-on"));
+        button.classList.add("is-on");
+        result.textContent = lines[button.dataset.choice];
+      });
+    });
+  </script>
+</body>
+</html>
