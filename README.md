@@ -1,31 +1,25 @@
 # Signet
 
-**Know the call before you answer.**
+Caller ID for iPhone. This repository publishes the call rules. The shipping app stays private.
 
-Signet is caller ID for iPhone. It shows who is calling, what they want, and whether the call is a scam — before you pick up. Contacts stay on the device. There are no ads, and the address book is never uploaded.
+`SignetCore` decides the risk of a call:
 
-This repository is the public introduction. The iPhone app is private and is not in this repo.
+- A spoofed number, or a request for a passcode, is **high** risk.
+- A known contact is **low** risk.
+- Anyone else is **watch**.
 
-## Open it
+![The incoming call](images/preview.png)
 
-[dhananisneh.github.io/signet](https://dhananisneh.github.io/signet/)
+The page at [dhananisneh.github.io/signet](https://dhananisneh.github.io/signet/) is the call screen. The rules live in `Sources/SignetCore`.
 
-![Signet](preview.png)
+## Test
 
-The page is a working preview. Decline, Shield, and Accept each explain what Signet does with that call. The number on screen is fictional.
+```bash
+swift test
+```
 
-## What a call shows
-
-- **Who** — a name, not a bare number
-- **Why** — the intent, such as a request for a one-time passcode
-- **Risk** — spoofed and high-risk calls are labeled before you answer
-
-## Privacy
-
-A lookup can send the number you ask about. It does not send your contacts.
+GitHub runs that on every push.
 
 ## Author
 
-[Sneh Dhanani](https://github.com/DhananiSneh) builds web products, iOS apps, Android apps, custom software, and quantum algorithms.
-
-[snehdhanani1@gmail.com](mailto:snehdhanani1@gmail.com)
+[Sneh Dhanani](https://github.com/DhananiSneh) · [snehdhanani1@gmail.com](mailto:snehdhanani1@gmail.com)
